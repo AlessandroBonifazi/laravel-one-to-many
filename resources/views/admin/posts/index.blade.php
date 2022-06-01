@@ -1,19 +1,23 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    {{-- Create new post --}}
     <div class="create-post">
         <a class="btn btn-primary mb-3" href="{{ route('admin.posts.create') }}">New Post</a>
     </div>
+    {{-- Table --}}
     <div class="table">
         <table style="width:100%">
             <tr>
                 <th>Title</th>
                 <th>Slug</th>
+                <th>Category</th>
             </tr>
             @foreach ($posts as $post)
                 <tr>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->slug }}</td>
+                    <td>{{ $post->category_id }}</td>
                     <td>
                         <a href="{{ route('admin.posts.show', $post->id) }}">
                             <i class="fas fa-search fa-2xl"></i>
