@@ -15,6 +15,7 @@
                         @endif
                         {{ __('You are logged in!') }}
                     </div>
+                    {{-- Links --}}
                     <a href="{{ route('admin.posts.index') }}">Home</a>
                 </div>
             </div>
