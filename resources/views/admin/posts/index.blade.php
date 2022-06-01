@@ -21,6 +21,7 @@
                         <a href="{{ route('admin.posts.edit', $post->id) }}">
                             <i class="fas fa-edit fa-2xl mx-3"></i>
                         </a>
+                        {{-- Delete --}}
                         <form action="{{ route('admin.posts.destroy', $post->id) }}" method="post" class=" d-inline-block">
                             @csrf
                             @method('DELETE')
