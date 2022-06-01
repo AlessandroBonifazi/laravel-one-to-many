@@ -19,7 +19,8 @@ class PostController extends Controller
     {
         //
         $posts = Post::all();
-        return view('admin.posts.index', compact('posts'));
+        $category = Category::all();
+        return view('admin.posts.index', compact('posts', 'category'));
     }
 
     /**
@@ -109,7 +110,7 @@ class PostController extends Controller
         $post->fill($data);
         $post->slug = Post::createSlug($post->title);
         $post->update();
-        return redirect()->route('admin.posts.show');
+        return redirect()->route('admin.posts.index');
     }
 
     /**
