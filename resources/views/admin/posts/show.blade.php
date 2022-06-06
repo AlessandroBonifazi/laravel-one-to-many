@@ -6,7 +6,7 @@
     <h3>slug</h3>
     <p>{{ $post->slug }}</p>
     <h3>Category</h3>
-    <p>{{ $category->name}}</p>
+    <p>{{ $post->category->name}}</p>
     <h3>content</h3>
     <p>{{ $post->content }}</p>
 

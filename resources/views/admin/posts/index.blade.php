@@ -17,7 +17,7 @@
                 <tr>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->slug }}</td>
-                    <td>{{ $post->category_id }}</td>
+                    <td>{{ $post->category->name }}</td>
                     <td>
                         <a href="{{ route('admin.posts.show', $post->id) }}">
                             <i class="fas fa-search fa-2xl"></i>
